@@ -1,0 +1,135 @@
+@import '../../../AppStyle/_vars'
+@import '../../../AppStyle/_mixins'
+
+.center
+    padding-left: calc(50% - $widthSite / 2)
+    padding-right: calc(50% - $widthSite / 2)
+
+.filterSort
+    height: 132px
+    position: relative
+    display: flex
+    gap: $gapGrid
+
+.filter
+    z-index: 10
+    padding: 13px 16px 16px
+    width: 360px
+    box-sizing: border-box
+    position: absolute
+    top: 38px
+
+    &[open]
+        background: #FFF
+        box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+
+    &__head:hover
+        color: $colorSelectSite
+
+    .filter__head:hover + svg path
+        fill: $colorSelectSite
+
+    &[open] &__head
+        color: $colorSelectSite
+
+    &[open] path
+        fill: $colorSelectSite
+
+    & path
+        cursor: pointer
+
+    &__summary
+        gap: 11px
+        list-style-type: none
+
+    &__head
+        color: $colorName
+        cursor: pointer
+        font-size: 14px
+        font-weight: 600
+        line-height: 17px
+        letter-spacing: 0em
+        text-align: left
+        margin-right: 11px
+
+    &__item
+        margin-top: 16px
+
+        &[open] .filter__heading
+            color: $colorSelectSite
+
+    &__heading
+        display: flex
+        align-items: center
+        cursor: pointer
+        color: $colorText
+        font-size: 14px
+        font-weight: 400
+        line-height: 17px
+        letter-spacing: 0em
+        text-align: left
+        padding: 8px 11px 11px 11px
+        border-bottom: 1px solid #EBEBEB
+        border-left: 5px solid $colorSelectSite
+
+    &__heading:hover
+        color: $colorSelectSite
+
+    &__item[open] .filter__heading
+        color: $colorSelectSite
+
+    &__linkBox
+        display: flex
+        flex-direction: column
+        gap: 11px
+        padding: 24px 16px 24px 16px
+
+    &__link
+        font-size: 14px
+        font-weight: 400
+        line-height: 17px
+        text-align: left
+        color: $colorText
+
+        &:hover
+            color: $colorSelectSite
+
+.sort
+    display: flex
+    margin-left: 490px
+    margin-top: 51px
+    gap: 28px
+
+    &__check
+        display: flex
+        gap: 6px
+        align-items: center
+        font-family: Roboto
+        font-size: 14px
+        font-weight: 400
+        line-height: 16px
+        text-align: left
+
+    &__summary
+        display: flex
+        align-items: center
+        position: relative
+        gap: 10px
+        cursor: pointer
+        font-size: 14px
+        font-weight: 400
+        line-height: 17px
+        text-align: left
+        &:hover
+            color: $colorSelectSite
+        &:hover path
+            fill: $colorSelectSite
+
+    &__box
+        z-index: 10
+        margin-top: 5px
+        position: absolute
+        margin-left: -10px
+        background: #fff
+        box-shadow: 6px 4px 35px rgba(0,0,0,0.21)
+        padding: 7px 30px 11px 9px

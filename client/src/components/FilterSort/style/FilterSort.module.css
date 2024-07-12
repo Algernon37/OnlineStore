@@ -1,0 +1,138 @@
+.center {
+  padding-left: calc(50% - 570px);
+  padding-right: calc(50% - 570px);
+}
+
+.filterSort {
+  height: 132px;
+  position: relative;
+  display: flex;
+  gap: 30px;
+}
+
+.filter {
+  z-index: 10;
+  padding: 13px 16px 16px;
+  width: 360px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 38px;
+}
+.filter[open] {
+  background: #FFF;
+  box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+}
+.filter__head:hover {
+  color: #F16D7F;
+}
+.filter .filter__head:hover + svg path {
+  fill: #F16D7F;
+}
+.filter[open] .filter__head {
+  color: #F16D7F;
+}
+.filter[open] path {
+  fill: #F16D7F;
+}
+.filter path {
+  cursor: pointer;
+}
+.filter__summary {
+  gap: 11px;
+  list-style-type: none;
+}
+.filter__head {
+  color: #000;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-right: 11px;
+}
+.filter__item {
+  margin-top: 16px;
+}
+.filter__item[open] .filter__heading {
+  color: #F16D7F;
+}
+.filter__heading {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #5D5D5D;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
+  padding: 8px 11px 11px 11px;
+  border-bottom: 1px solid #EBEBEB;
+  border-left: 5px solid #F16D7F;
+}
+.filter__heading:hover {
+  color: #F16D7F;
+}
+.filter__item[open] .filter__heading {
+  color: #F16D7F;
+}
+.filter__linkBox {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  padding: 24px 16px 24px 16px;
+}
+.filter__link {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  text-align: left;
+  color: #5D5D5D;
+}
+.filter__link:hover {
+  color: #F16D7F;
+}
+
+.sort {
+  display: flex;
+  margin-left: 490px;
+  margin-top: 51px;
+  gap: 28px;
+}
+.sort__check {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: left;
+}
+.sort__summary {
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  text-align: left;
+}
+.sort__summary:hover {
+  color: #F16D7F;
+}
+.sort__summary:hover path {
+  fill: #F16D7F;
+}
+.sort__box {
+  z-index: 10;
+  margin-top: 5px;
+  position: absolute;
+  margin-left: -10px;
+  background: #fff;
+  box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+  padding: 7px 30px 11px 9px;
+}/*# sourceMappingURL=FilterSort.module.css.map */

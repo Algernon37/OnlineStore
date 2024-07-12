@@ -1,0 +1,137 @@
+/* <!-- /////////////////// Header /////////////////// --> */
+header {
+  display: flex;
+  justify-content: center;
+  background-color: #222;
+  width: 100%;
+  height: 75px;
+  flex-shrink: 0;
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1140px;
+}
+
+header.fixed {
+  position: fixed;
+  z-index: 11;
+  background-color: #222;
+}
+
+.logo {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  gap: 41px;
+  padding-left: 32px;
+  cursor: pointer;
+}
+
+.button__copy {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  padding-right: 32px;
+}
+
+.men, .basket {
+  cursor: pointer;
+}
+
+/* <!-- /////////////////// Burger__menu /////////////////// --> */
+.nav.active {
+  display: flex;
+  width: 15%;
+  flex-direction: column;
+  background-color: #FFFFFF;
+  position: absolute;
+  top: 75px;
+  right: 0;
+  z-index: 1;
+  padding-left: 33px;
+  padding-top: 32px;
+  box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+}
+
+.burger__title {
+  color: #000;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 4px;
+}
+.burger__titles {
+  color: #F16D7F;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-top: 20px;
+  padding-bottom: 12px;
+}
+.burger__menu {
+  cursor: pointer;
+}
+
+.nav {
+  display: none;
+}
+.nav__link {
+  color: #6F6E6E;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+}
+.nav__link:hover {
+  color: #F16D7F;
+  border-bottom: none;
+}
+
+.new__arrivals, .link__menu {
+  color: #F16D7F;
+}
+
+.burger__links {
+  display: flex;
+  flex-direction: column;
+  padding-left: 25px;
+  gap: 11px;
+}
+
+.burger__links:last-child {
+  padding-bottom: 32px;
+}
+
+/* <!-- /////////////////// Media /////////////////// --> */
+@media (min-width: 768px) and (max-width: 1140px) {
+  .header {
+    width: 100%;
+  }
+  .intro__img {
+    height: 50%;
+    margin-top: 90px;
+  }
+}
+@media (min-width: 0px) and (max-width: 767px) {
+  .men, .basket {
+    display: none;
+  }
+  .header {
+    width: 100%;
+  }
+  .burger__menu {
+    margin-bottom: -10px;
+  }
+  .logo {
+    padding-left: 16px;
+  }
+}/*# sourceMappingURL=Header.module.css.map */

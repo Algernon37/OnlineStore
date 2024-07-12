@@ -1,0 +1,124 @@
+/* <!-- /////////////////// Intro /////////////////// --> */
+.intro {
+  display: flex;
+  background: #F1E4E6;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  margin-bottom: 65px;
+}
+.intro__img {
+  width: 50%;
+}
+.intro__info {
+  border-left: 12px solid #F16D7F;
+  padding-left: 16px;
+  margin-top: 70%;
+}
+.intro__content {
+  padding-left: 64px;
+}
+
+.Typography {
+  color: #222;
+  font-family: "Lato", sans-serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+}
+
+.Of_luxerious {
+  color: #222;
+  font-family: "Lato", sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.Fashion {
+  color: #F16D7F;
+  font-family: "Lato", sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+/* <!-- /////////////////// Media /////////////////// --> */
+@media (min-width: 768px) and (max-width: 1140px) {
+  .intro__img {
+    height: 50%;
+    margin-top: 90px;
+  }
+  .intro__info {
+    border-left: 12px solid #F16D7F;
+    padding-left: 16px;
+    margin-top: 50%;
+    margin-bottom: 50%;
+  }
+  .Typography {
+    color: #222;
+    font-family: "Lato", sans-serif;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+  }
+  .Of_luxerious {
+    color: #222;
+    font-family: "Lato", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .Fashion {
+    color: #F16D7F;
+    font-family: "Lato", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+}
+@media (min-width: 0px) and (max-width: 767px) {
+  .intro__img {
+    display: none;
+  }
+  .intro__info {
+    border-left: 12px solid #F16D7F;
+    padding-left: 16px;
+    margin-top: 50%;
+    margin-bottom: 50%;
+    overflow-wrap: break-word;
+  }
+  .men, .basket {
+    display: none;
+  }
+  .Typography {
+    color: #222;
+    font-family: "Lato", sans-serif;
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+  }
+  .Of_luxerious {
+    color: #222;
+    font-family: "Lato", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .Fashion {
+    color: #F16D7F;
+    font-family: "Lato", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+}/*# sourceMappingURL=Intro.module.css.map */

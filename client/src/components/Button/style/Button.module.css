@@ -1,0 +1,25 @@
+/* <!-- /////////////////// Button /////////////////// --> */
+.button__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.button {
+  cursor: pointer;
+  background-color: #FFFFFF;
+  border: solid 1px #F16D7F;
+  transition: background-color 0.3s ease;
+}
+.button:hover {
+  background-color: #F16D7F;
+  animation: shadow-drop-center 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+.button__text {
+  padding: 14px 39px 15px 39px;
+  color: #F26376;
+}
+.button:hover .button__text {
+  color: #FFFFFF;
+}/*# sourceMappingURL=Button.module.css.map */

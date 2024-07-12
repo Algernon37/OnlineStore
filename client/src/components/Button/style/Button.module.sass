@@ -1,0 +1,30 @@
+@import '../../../AppStyle/_mixins'
+@import '../../../AppStyle/_vars'
+
+/* <!-- /////////////////// Button /////////////////// --> */
+
+.button__container
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-bottom: 60px
+
+.button
+    cursor: pointer
+    background-color: #FFFFFF
+    border: solid 1px $colorSelectSite
+    transition: background-color 0.3s ease
+
+    &:hover
+        background-color: $colorSelectSite
+        animation: shadow-drop-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+
+    &__text
+        padding: 14px 39px 15px 39px
+        color: #F26376
+
+    &:hover &__text
+        color: #FFFFFF
+
+
+   
