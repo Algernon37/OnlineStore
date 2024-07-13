@@ -368,7 +368,7 @@ input[type=email]::placeholder {
     padding-top: 32px;
   }
 }
-@media (min-width: 0px) and (max-width: 320px) {
+@media (min-width: 0px) and (max-width: 319px) {
   .about__inner {
     padding: 48px 0 64px 0;
     height: 610px;

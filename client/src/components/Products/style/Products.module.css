@@ -1,26 +1,34 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+.fadeIn {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.fadeOut {
+  animation: fadeOut 0.5s ease-in-out;
+  visibility: hidden;
+}
+
 .products {
   margin-bottom: 48px;
-}
-.products__start {
-  text-align: center;
-  justify-content: center;
-  margin-bottom: 48px;
-}
-.products__title {
-  color: 1140px;
-  font-family: "Lato", sans-serif;
-  font-size: 30px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-.products__text {
-  color: #9F9F9F;
-  font-family: "Lato", sans-serif;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
 }
 .products__inner {
   width: 1140px;
@@ -28,6 +36,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 30px;
+  overflow: hidden;
 }
 .products__card {
   background-color: #F8F8F8;

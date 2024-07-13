@@ -135,4 +135,34 @@
   background: #fff;
   box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
   padding: 7px 30px 11px 9px;
+}
+
+/* <!-- /////////////////// Media /////////////////// --> */
+@media (min-width: 768px) and (max-width: 1140px) {
+  .sort {
+    margin-left: 435px;
+  }
+  .filter {
+    left: 50px;
+  }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .sort {
+    margin: 50px auto;
+  }
+  .filter {
+    width: 90%;
+    left: 20px;
+    top: 90px;
+  }
+}
+@media (min-width: 0px) and (max-width: 319px) {
+  .sort {
+    display: none;
+  }
+  .filter {
+    width: 80%;
+    left: 20px;
+    top: 90px;
+  }
 }/*# sourceMappingURL=FilterSort.module.css.map */

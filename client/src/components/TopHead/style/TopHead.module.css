@@ -33,4 +33,16 @@
 }
 .breadcrumbs__link:hover {
   color: #F16D7F;
+}
+
+/* <!-- /////////////////// Media /////////////////// --> */
+@media (min-width: 0px) and (max-width: 767px) {
+  .topHead {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  .breadcrumbs__li:not(:last-child)::after {
+    padding: 0px 2px;
+  }
 }/*# sourceMappingURL=TopHead.module.css.map */

@@ -11,4 +11,26 @@
 a {
   cursor: pointer;
   text-decoration: none;
+}
+
+.products__start {
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 48px;
+}
+.products__start__title {
+  color: 1140px;
+  font-family: "Lato", sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.products__start__text {
+  color: #9F9F9F;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }/*# sourceMappingURL=MainPage.module.css.map */

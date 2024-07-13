@@ -1,19 +1,46 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import style from './style/Products.module.sass';
 import productsData from '../../data/dataIndex';
 import { useNavigate } from 'react-router-dom';
 
-const Products = () => {
+
+const Products = ({ limit, currentPage = 1, setTotalPages }) => {
     const [products, setProducts] = useState([]);
+    const [displayedProducts, setDisplayedProducts] = useState([]);
+    const [animClass, setAnimClass] = useState('');
     const navigate = useNavigate();
+    const firstRender = useRef(true);
 
     useEffect(() => {
-        setProducts(productsData);
-    }, []);
+        if (firstRender.current) {
+            firstRender.current = false;
+            return;
+        }
+
+        setAnimClass(style.fadeOut);
+        const timer = setTimeout(() => {
+            const newProducts = productsData;
+            if (setTotalPages) {
+                const totalPages = Math.ceil(productsData.length / limit);
+                setTotalPages(totalPages);
+            }
+            setProducts(newProducts);
+            setAnimClass(style.fadeIn);
+        }, 100);
+
+        return () => clearTimeout(timer);
+    }, [limit, setTotalPages, currentPage]);
+
+    useEffect(() => {
+        if (products.length) {
+            const startIndex = (currentPage - 1) * limit;
+            setDisplayedProducts(products.slice(startIndex, startIndex + limit));
+        }
+    }, [products, currentPage, limit]);
 
     const handleProductClick = (product) => {
         localStorage.setItem('selectedProduct', JSON.stringify(product));
-        navigate(`/product/${product.id}`); 
+        navigate(`/product/${product.id}`);
     };
 
     const handleAddToCartClick = (e, product) => {
@@ -21,17 +48,13 @@ const Products = () => {
         let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
         cartItems.push(product);
         localStorage.setItem('cartItems', JSON.stringify(cartItems));
-        navigate('/cart'); 
+        navigate('/cart');
     };
 
     return (
         <div className={style.products}>
-            <div className={style.products__start}>
-                <h1 className={style.products__title}>Featured Items</h1>
-                <p className={style.products__text}>Shop for items based on what we featured this week</p>
-            </div>
-            <div className={style.products__inner}>
-                {products.map((product, index) => (
+            <div className={`${style.products__inner} ${animClass}`}>
+                {displayedProducts.map((product, index) => (
                     <div key={index} className={style.products__card} onClick={() => handleProductClick(product)}>
                         <div className={style.imageContainer}>
                             <img src={product.img} alt={product.header} className={style.products__photo} />

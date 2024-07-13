@@ -1,29 +1,33 @@
 @import '../../../AppStyle/_mixins'
 @import '../../../AppStyle/_vars'
 
+@keyframes fadeIn
+    from
+        opacity: 0
+        transform: translateY(10px)
+
+    to
+        opacity: 1
+        transform: translateY(0)
+
+@keyframes fadeOut
+    from
+        opacity: 1
+        transform: translateY(0)
+
+    to
+        opacity: 0
+        transform: translateY(10px)
+
+.fadeIn
+    animation: fadeIn 0.5s ease-in-out
+
+.fadeOut
+    animation: fadeOut 0.5s ease-in-out
+    visibility: hidden
+    
 .products
     margin-bottom: 48px
-
-    &__start
-        text-align: center
-        justify-content: center
-        margin-bottom: 48px
-
-    &__title
-        color: $widthSite
-        font-family: $mainFont, sans-serif
-        font-size: 30px
-        font-style: normal
-        font-weight: 400
-        line-height: normal
-
-    &__text
-        color: #9F9F9F
-        font-family: $mainFont, sans-serif
-        font-size: 14px
-        font-style: normal
-        font-weight: 400
-        line-height: normal
 
     &__inner
         width: $widthSite
@@ -31,6 +35,7 @@
         display: grid
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
         grid-gap: 30px
+        overflow: hidden
 
     &__card
         background-color: #F8F8F8
