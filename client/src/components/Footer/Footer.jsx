@@ -46,7 +46,7 @@ const Footer = () => {
                                     <path d="M300.376 0H22.2143C9.94567 0 0 10.969 0 24.5C0 38.031 9.94567 49 22.2143 49H300.376C312.644 49 322.59 38.031 322.59 24.5C322.59 10.969 312.644 0 300.376 0Z" fill="#E1E1E1" />
                                 </svg>
                                 <form action="" className={style.subscribe__form}>
-                                    <input id="emailInput" required autoFocus type="email" placeholder="Enter Your Email"></input>
+                                    <input id="emailInput" type="email" placeholder="Enter Your Email"></input>
                                     <button className={style.subscribe__bt} type="submit">
                                         Subscribe
                                     </button>

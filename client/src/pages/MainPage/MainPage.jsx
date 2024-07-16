@@ -5,15 +5,11 @@ import Intro from '../../components/Intro/Intro'
 import Offer from '../../components/Offer/Offer'
 import Button from '../../components/Button/Button'
 import Footer from '../../components/Footer/Footer'
-import { useRef, useEffect } from 'react';
+import { useRef } from 'react';
 
 function MainPage() {
     const introRef = useRef(null);
     const limitOfCardsOnThePage = 6;
-
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
 
     return (
         <div className={style.body}>

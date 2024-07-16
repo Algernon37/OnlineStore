@@ -1,42 +1,37 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import style from './style/Products.module.sass';
+import { useDispatch, useSelector } from 'react-redux';
+import { setProducts } from '../../store/productsSlice';
 import productsData from '../../data/dataIndex';
 import { useNavigate } from 'react-router-dom';
 
 
 const Products = ({ limit, currentPage = 1, setTotalPages }) => {
-    const [products, setProducts] = useState([]);
+    const dispatch = useDispatch();
+    const products = useSelector((state) => state.products.products);
     const [displayedProducts, setDisplayedProducts] = useState([]);
     const [animClass, setAnimClass] = useState('');
     const navigate = useNavigate();
-    const firstRender = useRef(true);
 
     useEffect(() => {
-        if (firstRender.current) {
-            firstRender.current = false;
-            return;
-        }
-
         setAnimClass(style.fadeOut);
         const timer = setTimeout(() => {
-            const newProducts = productsData;
+            const newProducts = productsData; 
             if (setTotalPages) {
-                const totalPages = Math.ceil(productsData.length / limit);
+                const totalPages = Math.ceil(newProducts.length / limit);
                 setTotalPages(totalPages);
             }
-            setProducts(newProducts);
+            dispatch(setProducts(newProducts)); 
             setAnimClass(style.fadeIn);
+
+            if (newProducts.length) {
+                const startIndex = (currentPage - 1) * limit;
+                setDisplayedProducts(newProducts.slice(startIndex, startIndex + limit));
+            }
         }, 100);
 
         return () => clearTimeout(timer);
-    }, [limit, setTotalPages, currentPage]);
-
-    useEffect(() => {
-        if (products.length) {
-            const startIndex = (currentPage - 1) * limit;
-            setDisplayedProducts(products.slice(startIndex, startIndex + limit));
-        }
-    }, [products, currentPage, limit]);
+    }, [limit, setTotalPages, currentPage, dispatch]);
 
     const handleProductClick = (product) => {
         localStorage.setItem('selectedProduct', JSON.stringify(product));

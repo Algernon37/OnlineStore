@@ -1,0 +1,205 @@
+@import '../../../AppStyle/_mixins'
+@import '../../../AppStyle/_vars'
+
+.slick-slider
+    min-width: 0
+
+.slick-list
+    overflow: hidden
+
+.slick-track
+    display: flex
+    align-items: flex-start
+
+.slider
+    position: relative
+    padding: 0px 60px
+
+.slider .slick-arrow
+    position: absolute
+    top: 50%
+    margin: -30px 0px 0px 0px
+    z-index: 10
+    font-size: 0
+    width: 30px
+    height: 60px
+
+.slider .slick-arrow.slick-prev
+    width: 47px
+    height: 47px
+    left: 0
+    background: url('../img/sl-arrow_l.svg') center center no-repeat
+    background-color: #2A2A2A26
+    cursor: pointer
+
+.slider .slick-arrow.slick-prev:hover
+    background: url('../img/sl-arrow_l2.svg') center center no-repeat
+    background-color: #2A2A2A26
+
+.slider .slick-arrow.slick-next
+    right: 0
+    width: 47px
+    height: 47px
+    background: url('../img/sl-arrow_r.svg') center center no-repeat
+    background-color: #2A2A2A26
+    transition: background-color 0.3s
+    cursor: pointer
+
+.slider .slick-arrow.slick-next:hover
+    background: url('../img/sl-arrow_r2.svg') center center no-repeat
+    background-color: #2A2A2A26
+
+.slider__item
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 0px 15px
+
+.slider__item img
+    max-width: 100%
+
+.description
+    position: relative
+    margin-bottom: 618px
+
+.description__inner
+    margin-top: -65px
+    padding: 65px 0
+    width: 1141px
+    position: absolute
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    background: #FFFFFF
+    border: 1px solid #EAEAEA
+
+.main__block
+    width: 642px
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+
+.headers
+    display: flex
+    justify-content: center
+    flex-direction: column
+    align-items: center
+
+.first__header
+    font-size: 14px
+    font-weight: 400
+    line-height: 17px
+    letter-spacing: 0em
+    text-align: left
+    color: $colorSelectSite
+
+.first__header::after
+    content: ''
+    margin: 12px auto
+    display: block
+    width: 63px
+    height: 4px
+    background-color: $colorSelectSite
+
+.second__header
+    font-size: 18px
+    font-weight: 400
+    line-height: 22px
+    letter-spacing: 0em
+    text-align: left
+    color: #4D4D4D
+    margin-bottom: 49px
+
+.texts
+    width: 555px
+    display: flex
+    justify-content: center
+    flex-direction: column
+    align-items: center
+    gap: 32px
+    border-bottom: 1px solid #EAEAEA
+
+.main__text
+    font-size: 13.7px
+    font-weight: 400
+    line-height: 17px
+    text-align: center
+    letter-spacing: 0em
+    color: #5E5E5E
+
+.big__price
+    font-size: 24px
+    font-weight: 400
+    line-height: 29px
+    letter-spacing: 0em
+    text-align: left
+    color: $colorSelectSite
+    margin-bottom: 65px
+
+.sort__block
+    padding-top: 65px
+
+.sort
+    display: flex
+    gap: 23px
+    margin-bottom: 48px
+
+    &__check
+        display: flex
+        gap: 6px
+        align-items: center
+        font-size: 14px
+        font-weight: 400
+        line-height: 16px
+        text-align: left
+
+    &__summary
+        display: flex
+        align-items: center
+        position: relative
+        gap: 10px
+        cursor: pointer
+        font-size: 14px
+        font-weight: 400
+        line-height: 17px
+        text-align: left
+        &:hover
+            color: $colorSelectSite
+        &:hover path
+            fill: $colorSelectSite
+
+.button__container
+    display: flex
+    align-items: center
+    justify-content: center
+
+.button
+    cursor: pointer
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: 23px
+    background-color: #FFFFFF
+    border: solid 1px $colorSelectSite
+    transition: background-color 0.3s ease
+    padding: 15px 57px 15px 24px
+    &:hover
+        background-color: $colorSelectSite
+        animation: shadow-drop-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+
+    &:hover path
+        fill: #FFFFFF
+
+    &__text
+        font-size: 16px
+        font-weight: 400
+        line-height: 19px
+        letter-spacing: 0em
+        text-align: left
+        color: #F26376
+
+    &:hover &__text
+        color: #FFFFFF
+

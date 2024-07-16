@@ -12,7 +12,7 @@ function AppRouter() {
                 <Route path="/" element={<MainPage />} />
                 <Route path="/cart" element={<Cart />} />
                 <Route path="/catalog" element={<Catalog />} />
-                <Route path="/product:id" element={<Product />} />
+                <Route path="/product/:id" element={<Product />} />
                 <Route path="/registration" element={<Registration />} />
             </Routes>
         </BrowserRouter>

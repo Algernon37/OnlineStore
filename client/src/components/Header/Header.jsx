@@ -12,10 +12,12 @@ const Header = ({ introRef }) => {
         const header = headerRef.current;
         const burgerMenu = burgerMenuRef.current;
         const nav = navRef.current;
-        const intro = introRef.current;
+        const intro = introRef?.current; 
+
         if (!header || !burgerMenu || !nav) {
             return;
         }
+
         const handleBurgerClick = () => {
             nav.classList.toggle(style.active);
         };
@@ -23,7 +25,7 @@ const Header = ({ introRef }) => {
         burgerMenu.addEventListener('click', handleBurgerClick);
 
         const handleScrollResize = () => {
-            const introHeight = intro.offsetHeight;
+            const introHeight = intro ? intro.offsetHeight : 0; 
             const scrollPos = window.scrollY;
 
             if (scrollPos > introHeight) {
@@ -37,12 +39,13 @@ const Header = ({ introRef }) => {
         window.addEventListener('resize', handleScrollResize);
 
         handleScrollResize();
+
         return () => {
             burgerMenu.removeEventListener('click', handleBurgerClick);
             window.removeEventListener('scroll', handleScrollResize);
             window.removeEventListener('resize', handleScrollResize);
         };
-    }, []);
+    }, [introRef]);
 
     return (
         <>
