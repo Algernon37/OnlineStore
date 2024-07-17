@@ -1,6 +1,17 @@
 @import '../../../AppStyle/_mixins'
 @import '../../../AppStyle/_vars'
 
+.wrapper
+    background: #F7F7F7
+    padding: 50px
+    display: flex
+    justify-content: center
+    align-items: center
+
+.center
+    padding-left: calc(50% - 570px)
+    padding-right: calc(50% - 570px)
+
 .slick-slider
     min-width: 0
 
@@ -14,55 +25,59 @@
 .slider
     position: relative
     padding: 0px 60px
+    width: 100%
+    max-width: 1200px
+    margin: 0 auto
 
-.slider .slick-arrow
-    position: absolute
-    top: 50%
-    margin: -30px 0px 0px 0px
-    z-index: 10
-    font-size: 0
-    width: 30px
-    height: 60px
-
-.slider .slick-arrow.slick-prev
+.customPrevArrow
     width: 47px
     height: 47px
-    left: 0
-    background: url('../img/sl-arrow_l.svg') center center no-repeat
     background-color: #2A2A2A26
     cursor: pointer
-
-.slider .slick-arrow.slick-prev:hover
-    background: url('../img/sl-arrow_l2.svg') center center no-repeat
-    background-color: #2A2A2A26
-
-.slider .slick-arrow.slick-next
-    right: 0
-    width: 47px
-    height: 47px
-    background: url('../img/sl-arrow_r.svg') center center no-repeat
-    background-color: #2A2A2A26
-    transition: background-color 0.3s
-    cursor: pointer
-
-.slider .slick-arrow.slick-next:hover
-    background: url('../img/sl-arrow_r2.svg') center center no-repeat
-    background-color: #2A2A2A26
-
-.slider__item
     display: flex
-    justify-content: center
     align-items: center
-    padding: 0px 15px
+    justify-content: center
+    border: none
 
-.slider__item img
+    &:hover
+        background-color: #2A2A2A26
+
+.customNextArrow
+    width: 47px
+    height: 47px
+    background-color: #2A2A2A26
+    cursor: pointer
+    display: flex
+    align-items: center
+    justify-content: center
+    border: none
+
+    &:hover
+        background-color: #2A2A2A26
+
+.customPrevArrow svg path,
+.customNextArrow svg path
+    transition: fill 0.3s ease
+
+.customPrevArrow:hover svg path,
+.customNextArrow:hover svg path
+    fill: $colorSelectSite
+
+.slider .sliderItem
+    display: flex !important
+    justify-content: center !important
+    align-items: center !important
+    padding: 0px 15px !important
+
+.sliderItem img
     max-width: 100%
+    height: auto
 
 .description
     position: relative
     margin-bottom: 618px
 
-.description__inner
+.descriptionInner
     margin-top: -65px
     padding: 65px 0
     width: 1141px
@@ -74,7 +89,7 @@
     background: #FFFFFF
     border: 1px solid #EAEAEA
 
-.main__block
+.mainBlock
     width: 642px
     display: flex
     justify-content: center
@@ -87,7 +102,7 @@
     flex-direction: column
     align-items: center
 
-.first__header
+.firstHeader
     font-size: 14px
     font-weight: 400
     line-height: 17px
@@ -95,7 +110,7 @@
     text-align: left
     color: $colorSelectSite
 
-.first__header::after
+.firstHeader::after
     content: ''
     margin: 12px auto
     display: block
@@ -103,7 +118,7 @@
     height: 4px
     background-color: $colorSelectSite
 
-.second__header
+.secondHeader
     font-size: 18px
     font-weight: 400
     line-height: 22px
@@ -121,7 +136,7 @@
     gap: 32px
     border-bottom: 1px solid #EAEAEA
 
-.main__text
+.mainText
     font-size: 13.7px
     font-weight: 400
     line-height: 17px
@@ -129,7 +144,7 @@
     letter-spacing: 0em
     color: #5E5E5E
 
-.big__price
+.bigPrice
     font-size: 24px
     font-weight: 400
     line-height: 29px
@@ -138,39 +153,15 @@
     color: $colorSelectSite
     margin-bottom: 65px
 
-.sort__block
+.sortBlock
     padding-top: 65px
-
+    
 .sort
     display: flex
     gap: 23px
     margin-bottom: 48px
 
-    &__check
-        display: flex
-        gap: 6px
-        align-items: center
-        font-size: 14px
-        font-weight: 400
-        line-height: 16px
-        text-align: left
-
-    &__summary
-        display: flex
-        align-items: center
-        position: relative
-        gap: 10px
-        cursor: pointer
-        font-size: 14px
-        font-weight: 400
-        line-height: 17px
-        text-align: left
-        &:hover
-            color: $colorSelectSite
-        &:hover path
-            fill: $colorSelectSite
-
-.button__container
+.buttonContainer
     display: flex
     align-items: center
     justify-content: center
@@ -203,3 +194,51 @@
     &:hover &__text
         color: #FFFFFF
 
+////////MEDIA////////////   
+
+@media (min-width: 768px) and (max-width: 1140px)
+    .descriptionInner
+        width: 95%
+        left: 50%
+        transform: translateX(-50%)
+
+    .customPrevArrow,
+    .customNextArrow
+        padding: 10px
+
+@media (min-width: 0px) and (max-width: 767px)
+    .wrapper
+        padding: 20px
+
+    .description
+        margin-bottom: 818px
+
+    .descriptionInner
+        margin-top: 0
+        left: 50%
+        transform: translateX(-50%)
+        width: 95%
+
+    .sort
+        flex-direction: column
+        align-items: center
+
+    .customPrevArrow,
+    .customNextArrow
+        padding: 5px
+
+    .slider
+        padding: 0 15px
+
+        &__item
+            padding: 10px
+
+        &__item img
+            width: 374px
+            height: 454px
+
+    .mainBlock
+        width: 100%
+
+    .texts
+        width: 100%

@@ -12,7 +12,7 @@ const Products = ({ limit, currentPage = 1, setTotalPages }) => {
     const [displayedProducts, setDisplayedProducts] = useState([]);
     const [animClass, setAnimClass] = useState('');
     const navigate = useNavigate();
-
+    
     useEffect(() => {
         setAnimClass(style.fadeOut);
         const timer = setTimeout(() => {

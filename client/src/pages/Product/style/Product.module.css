@@ -1,1 +1,14 @@
-/*# sourceMappingURL=Product.module.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.body {
+  font-family: "Lato", sans-serif;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}/*# sourceMappingURL=Product.module.css.map */

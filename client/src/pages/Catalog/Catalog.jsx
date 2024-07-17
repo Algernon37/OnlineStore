@@ -20,7 +20,7 @@ function Catalog() {
     return (
         <div className={style.body}>
             <Header introRef={introRef} />
-            <TopHead />
+            <TopHead tittle={'NEW ARRIVALS'}/>
             <FilterSort introRef={introRef} />
             <Products
                 limit={limitOfCardsOnThePage}

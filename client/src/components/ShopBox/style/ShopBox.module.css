@@ -1,0 +1,222 @@
+.shopBox {
+  display: flex;
+  justify-content: center;
+  gap: 128px;
+  margin: 96px 0px 128px 0px;
+}
+
+.center {
+  padding-left: calc(50% - 570px);
+  padding-right: calc(50% - 570px);
+}
+
+.shopCards {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 652px;
+}
+
+.shopCard {
+  display: flex;
+  position: relative;
+  border: solid 1px #EAEAEA;
+}
+.shopCard:hover {
+  animation: shadow-drop-center 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+.shopCard svg {
+  position: absolute;
+  margin: 28px 22px 0px 0px;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+.shopCard__box {
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
+  padding: 22px 97px 62px 31px;
+}
+.shopCard__img {
+  width: 262px;
+}
+.shopCard__title {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.shopCard__main {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: left;
+  list-style: none;
+}
+.shopCard__price {
+  color: #F16D7F;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: left;
+}
+
+.buttons {
+  display: flex;
+  gap: 192px;
+}
+
+.button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFFFFF;
+  border: solid 1px #A4A4A4;
+  transition: background-color 0.3s ease;
+  padding: 16px 34px;
+}
+.button:hover {
+  animation: shadow-drop-center 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  border: solid 1px #FFFFFF;
+}
+.button__text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+  color: #000;
+}
+.button__proceed {
+  background-color: #F16D7F;
+  border: solid 1px #FFFFFF;
+}
+.button__proceed:hover {
+  background-color: #FFFFFF;
+  animation: shadow-drop-center 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  border: solid 1px #F16D7F;
+}
+.button__proceed-text {
+  color: #FFFFFF;
+}
+.button__proceed:hover .button__proceed-text {
+  color: #F16D7F;
+}
+.button__order {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFFFFF;
+  border: solid 1px #EAEAEA;
+  width: 102px;
+  height: 35px;
+  padding: 10px 12px;
+}
+.button__order_text {
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 13px;
+  letter-spacing: 0em;
+  color: #5D5D5D;
+  opacity: 0.6;
+}
+.button__order:hover .button__order_text {
+  opacity: 1;
+}
+.button__order:hover {
+  animation: shadow-drop-center 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  border: solid 1px #FFFFFF;
+}
+
+#numberInput {
+  width: 44px;
+  height: 24.95px;
+  margin-left: 24px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #5D5D5D;
+  outline: none;
+  border: solid 1px #EAEAEA;
+}
+
+.shipp {
+  width: 360px;
+}
+
+.order {
+  margin-bottom: 57px;
+}
+.order__title {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #222;
+  margin-bottom: 20px;
+}
+.order__form_inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 23px;
+}
+.order__form_input {
+  padding: 16px;
+  border: solid 1px #A4A4A4;
+  outline: none;
+  color: #5D5D5D;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.shipp__buying {
+  background: #F5F3F3;
+}
+
+.buying {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  justify-content: center;
+  padding: 42px;
+}
+.buying__cost {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+  padding-bottom: 21px;
+  border-bottom: 1px solid #E2E2E2;
+}
+.buying__title-small {
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 13px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #5D5D5D;
+}
+.buying__title-big {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #5D5D5D;
+}
+.buying__price {
+  margin-left: 14px;
+}
+.buying__price-total {
+  margin-left: 14px;
+  color: #F16D7F;
+}/*# sourceMappingURL=ShopBox.module.css.map */

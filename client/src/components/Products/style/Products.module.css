@@ -29,6 +29,7 @@
 
 .products {
   margin-bottom: 48px;
+  min-height: 100vh;
 }
 .products__inner {
   width: 1140px;

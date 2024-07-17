@@ -1,0 +1,17 @@
+.sort__summary {
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  text-align: left;
+}
+.sort__summary:hover {
+  color: #F16D7F;
+}
+.sort__summary:hover path {
+  fill: #F16D7F;
+}/*# sourceMappingURL=SortDetails.module.css.map */

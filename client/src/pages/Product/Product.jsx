@@ -11,17 +11,13 @@ function Product() {
     const { id } = useParams();
     const products = useSelector((state) => state.products.products);
     const productId = Number(id);
-
-    console.log('All products:', products); 
-
     const product = products.find((product) => product.id === productId);
-    console.log('Found product:', product);
 
-    const limitOfCardsOnThePage = 2;
+    const limitOfCardsOnThePage = 3;
     return (
         <div className={style.body}>
             <Header />
-            <TopHead />
+            <TopHead tittle={'NEW ARRIVALS'}/>
             <ProductSliderPart product={product} />
             <Products limit={limitOfCardsOnThePage} />
             <Footer />

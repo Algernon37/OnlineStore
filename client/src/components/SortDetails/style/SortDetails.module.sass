@@ -1,0 +1,18 @@
+@import '../../../AppStyle/_mixins'
+@import '../../../AppStyle/_vars'
+
+.sort
+    &__summary
+        display: flex
+        align-items: center
+        position: relative
+        gap: 10px
+        cursor: pointer
+        font-size: 14px
+        font-weight: 400
+        line-height: 17px
+        text-align: left
+        &:hover
+            color: $colorSelectSite
+        &:hover path
+            fill: $colorSelectSite
