@@ -1,0 +1,134 @@
+@keyframes shadow-drop-center {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 30px 0px rgba(0, 0, 0, 0.5);
+  }
+}
+.cardsBox {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 652px;
+}
+
+.shopcard {
+  display: flex;
+  position: relative;
+  border: solid 1px #EAEAEA;
+}
+.shopcard:hover {
+  animation: shadow-drop-center 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+.shopcard svg {
+  position: absolute;
+  margin: 28px 22px 0px 0px;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+.shopcard__box {
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
+  padding: 22px 97px 62px 31px;
+}
+.shopcard__img {
+  width: 262px;
+}
+.shopcard__title {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.shopcard__main {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: left;
+  list-style: none;
+}
+.shopcard__price {
+  color: #F16D7F;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: left;
+}
+
+#numberInput {
+  width: 44px;
+  height: 24.95px;
+  margin-left: 24px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #5D5D5D;
+  outline: none;
+  border: solid 1px #EAEAEA;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .cardsBox {
+    width: 95%;
+  }
+  .shopcard {
+    height: 188px;
+  }
+  .shopcard__img {
+    width: 144px;
+    height: 188px;
+  }
+  .shopcard__box {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    padding: 13px 15px 32px 17px;
+  }
+  .shopcard__title {
+    font-size: 14px;
+  }
+  .shopcard__main {
+    gap: 0px;
+    font-size: 12px;
+  }
+  .shopcard__price {
+    font-size: 12px;
+  }
+  .shopcard svg {
+    margin: 5px 5px 0px 0px;
+    width: 10px;
+    height: 10px;
+  }
+  #numberInput {
+    width: 30px;
+    height: 20px;
+    margin-left: 24px;
+    text-align: center;
+    font-size: 14px;
+  }
+}
+@media (min-width: 0px) and (max-width: 426px) {
+  .shopcard__img {
+    display: none;
+  }
+}
+@media (min-width: 0px) and (max-width: 320px) {
+  .cardsBox {
+    width: 90%;
+  }
+  #numberInput {
+    width: 30px;
+    height: 20px;
+    margin-left: 10px;
+    text-align: center;
+    font-size: 14px;
+  }
+}/*# sourceMappingURL=ProductsInCart.module.css.map */

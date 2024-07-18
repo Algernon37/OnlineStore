@@ -13,6 +13,11 @@
   color: #F16D7F;
 }
 
+.center {
+  padding-left: calc(50% - 570px);
+  padding-right: calc(50% - 570px);
+}
+
 .breadcrumbs__ul {
   list-style-type: none;
   display: flex;

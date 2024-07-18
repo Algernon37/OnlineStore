@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setProducts } from '../../store/productsSlice';
 import productsData from '../../data/dataIndex';
 import { useNavigate } from 'react-router-dom';
-
+import { addToCart } from '../../store/productsInCart'
 
 const Products = ({ limit, currentPage = 1, setTotalPages }) => {
     const dispatch = useDispatch();
@@ -12,16 +12,16 @@ const Products = ({ limit, currentPage = 1, setTotalPages }) => {
     const [displayedProducts, setDisplayedProducts] = useState([]);
     const [animClass, setAnimClass] = useState('');
     const navigate = useNavigate();
-    
+
     useEffect(() => {
         setAnimClass(style.fadeOut);
         const timer = setTimeout(() => {
-            const newProducts = productsData; 
+            const newProducts = productsData;
             if (setTotalPages) {
                 const totalPages = Math.ceil(newProducts.length / limit);
                 setTotalPages(totalPages);
             }
-            dispatch(setProducts(newProducts)); 
+            dispatch(setProducts(newProducts));
             setAnimClass(style.fadeIn);
 
             if (newProducts.length) {
@@ -34,15 +34,12 @@ const Products = ({ limit, currentPage = 1, setTotalPages }) => {
     }, [limit, setTotalPages, currentPage, dispatch]);
 
     const handleProductClick = (product) => {
-        localStorage.setItem('selectedProduct', JSON.stringify(product));
         navigate(`/product/${product.id}`);
     };
 
     const handleAddToCartClick = (e, product) => {
         e.stopPropagation();
-        let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-        cartItems.push(product);
-        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        dispatch(addToCart(product)); 
         navigate('/cart');
     };
 

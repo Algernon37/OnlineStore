@@ -3,6 +3,7 @@ import Header from '../../components/Header/Header'
 import TopHead from '../../components/TopHead/TopHead'
 import Products from '../../components/Products/Products'
 import Footer from '../../components/Footer/Footer'
+import AboutUs from '../../components/AboutUs/AboutUs'
 import ProductSliderPart from '../../components/ProductSliderPart/ProductSliderPart'
 import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
@@ -20,6 +21,7 @@ function Product() {
             <TopHead tittle={'NEW ARRIVALS'}/>
             <ProductSliderPart product={product} />
             <Products limit={limitOfCardsOnThePage} />
+            <AboutUs />
             <Footer />
         </div>
     );

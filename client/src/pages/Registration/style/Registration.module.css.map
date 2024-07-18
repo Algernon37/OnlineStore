@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"Registration.module.css"}
+{"version":3,"sources":["Registration.module.sass","Registration.module.css"],"names":[],"mappings":"AAGA;EACI,SAAA;EACA,UAAA;EACA,SAAA;ACFJ;;ADIA;EACI,+BAAA;ACDJ;;ADGA;EACI,eAAA;EACA,qBAAA;ACAJ","file":"Registration.module.css"}

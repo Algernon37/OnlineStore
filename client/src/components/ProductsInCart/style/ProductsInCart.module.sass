@@ -1,0 +1,132 @@
+@import '../../../AppStyle/_mixins'
+@import '../../../AppStyle/_vars'
+
+@keyframes shadow-drop-center
+    0%
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0)
+
+    100%
+        box-shadow: 0 0 30px 0px rgba(0, 0, 0, 0.5)
+
+.cardsBox
+    display: flex
+    flex-direction: column
+    gap: 40px
+    width: 652px
+
+.shopcard
+    display: flex
+    position: relative
+    border: solid 1px #EAEAEA
+
+    &:hover
+        animation: shadow-drop-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+
+    & svg
+        position: absolute
+        margin: 28px 22px 0px 0px
+        top: 0
+        right: 0
+        cursor: pointer
+
+    &__box
+        display: flex
+        flex-direction: column
+        gap: 42px
+        padding: 22px 97px 62px 31px
+
+    &__img
+        width: 262px
+
+    &__title
+        font-size: 24px
+        font-weight: 400
+        line-height: 29px
+        letter-spacing: 0em
+        text-align: left
+
+    &__main
+        display: flex
+        flex-direction: column
+        gap: 6px
+        font-size: 22px
+        font-weight: 400
+        line-height: 26px
+        text-align: left
+        list-style: none
+
+    &__price
+        color: $colorSelectSite
+        font-size: 22px
+        font-weight: 400
+        line-height: 26px
+        text-align: left
+
+#numberInput
+    width: 44px
+    height: 24.95px
+    margin-left: 24px
+    text-align: center
+    font-size: 18px
+    font-weight: 400
+    line-height: 22px
+    color: $colorText
+    outline: none
+    border: solid 1px #EAEAEA
+
+////////MEDIA////////////   
+
+@media (min-width: 320px) and (max-width: 767px)
+
+    .cardsBox
+        width: 95%
+
+    .shopcard
+        height: 188px
+
+        &__img
+            width: 144px
+            height: 188px
+
+        &__box
+            display: flex
+            flex-direction: column
+            gap: 0px
+            padding: 13px 15px 32px 17px
+
+        &__title
+            font-size: 14px
+
+        &__main
+            gap: 0px
+            font-size: 12px
+
+        &__price
+            font-size: 12px
+
+        & svg
+            margin: 5px 5px 0px 0px
+            width: 10px
+            height: 10px
+
+    #numberInput
+        width: 30px
+        height: 20px
+        margin-left: 24px
+        text-align: center
+        font-size: 14px
+
+@media (min-width: 0px) and (max-width: 426px)
+    .shopcard__img
+        display: none
+
+@media (min-width: 0px) and (max-width: 320px)
+    .cardsBox
+        width: 90%
+
+    #numberInput
+        width: 30px
+        height: 20px
+        margin-left: 10px
+        text-align: center
+        font-size: 14px

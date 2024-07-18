@@ -5,6 +5,7 @@ import FilterSort from '../../components/FilterSort/FilterSort'
 import Products from '../../components/Products/Products'
 import Pagination from '../../components/Pagination/Pagination'
 import Footer from '../../components/Footer/Footer'
+import AboutUs from '../../components/AboutUs/AboutUs'
 import { useRef, useState } from 'react';
 
 function Catalog() {
@@ -36,6 +37,7 @@ function Catalog() {
                     onPageChange={handlePageChange}
                 />
             )}
+            <AboutUs />
             <Footer />
         </div>
     );

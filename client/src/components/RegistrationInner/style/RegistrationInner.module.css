@@ -1,0 +1,202 @@
+@keyframes shadow-drop-center {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 30px 0px rgba(0, 0, 0, 0.5);
+  }
+}
+.center {
+  padding-left: calc(50% - 570px);
+  padding-right: calc(50% - 570px);
+}
+
+.registration {
+  display: flex;
+  gap: 128px;
+  margin: 64px 0px 96px 0px;
+}
+.registration__main {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+.registration__button {
+  width: 167px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F16D7F;
+  border: solid 1px #F16D7F;
+  transition: background-color 0.3s ease;
+  padding: 16px 29px;
+  color: #FFFFFF;
+}
+.registration__button:hover {
+  animation: shadow-drop-center 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  border: solid 1px #F16D7F;
+  background-color: #FFFFFF;
+}
+.registration__button_text {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+  color: #FFFFFF;
+}
+.registration__button:hover .registration__button_text {
+  color: #F16D7F;
+}
+.registration__button-text svg {
+  margin-top: 4px;
+}
+.registration__button:hover path {
+  fill: #F16D7F;
+}
+
+.perks {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.perks__title {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #222;
+}
+.perks__text {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #222;
+}
+.perks__ull {
+  list-style: url("/img/Registration/jackdaw.svg");
+  margin-left: 30px;
+}
+.perks__li {
+  padding-left: 22px;
+  margin-bottom: 16px;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #222;
+}
+
+.person .person__title {
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #222;
+}
+.person__form_inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.person__form_input {
+  padding: 16px;
+  border: solid 1px #A4A4A4;
+  outline: none;
+  color: #5D5D5D;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.gender {
+  display: flex;
+  gap: 20px;
+}
+.gender__check {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.login__title {
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #222;
+}
+.login__form_inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+.login__form_input {
+  padding: 16px;
+  border: solid 1px #A4A4A4;
+  outline: none;
+  color: #5D5D5D;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 22px;
+}
+.login__text {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #B1B1B1;
+}
+
+.radio_round {
+  cursor: pointer;
+}
+
+@media (min-width: 768px) and (max-width: 1140px) {
+  .registration {
+    display: flex;
+    gap: 22px;
+    padding: 0px 20px;
+  }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .shipp {
+    width: 95%;
+  }
+  .registration {
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px;
+    gap: 40px;
+  }
+  .perks__title, .perks__text, .perks__li {
+    font-size: 16px;
+  }
+}
+@media (min-width: 0px) and (max-width: 320px) {
+  .shipp {
+    width: 95%;
+  }
+  .registration {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+    gap: 20px;
+  }
+  .perks__title, .perks__text, .perks__li {
+    font-size: 14px;
+  }
+}/*# sourceMappingURL=RegistrationInner.module.css.map */

@@ -1,19 +1,19 @@
 import style from './style/TopHead.module.sass'
 import { Link } from 'react-router-dom';
 
-function TopHead({ 
+const TopHead = ({ 
     title,
-    ItIsCard = false,
+    hide = false,
     FirstBreadcrumb = 'HOME',
     SecondBreadcrumb = 'MEN',
     ThirdBreadcrumb = 'NEW ARRIVALS',
-}) {
+}) => {
     return (
-        <div className={style.topHead}>
+        <div className={`${style.topHead} ${style.center}`} >
             <h2 className={style.topHead__heading}>
                 {title}
             </h2>
-            {ItIsCard ? null :
+            {hide ? null :
                 (
                     <nav className={style.breadcrumbs}>
                         <ul className={style.breadcrumbs__ul}>

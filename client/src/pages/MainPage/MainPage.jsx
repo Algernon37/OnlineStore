@@ -5,6 +5,7 @@ import Intro from '../../components/Intro/Intro'
 import Offer from '../../components/Offer/Offer'
 import Button from '../../components/Button/Button'
 import Footer from '../../components/Footer/Footer'
+import AboutUs from '../../components/AboutUs/AboutUs'
 import { useRef } from 'react';
 
 function MainPage() {
@@ -24,6 +25,7 @@ function MainPage() {
                 limit={limitOfCardsOnThePage}
             />
             <Button />
+            <AboutUs />
             <Footer />
         </div>
     );

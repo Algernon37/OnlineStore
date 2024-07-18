@@ -1,0 +1,205 @@
+@import '../../../AppStyle/_mixins'
+@import '../../../AppStyle/_vars'
+
+@keyframes shadow-drop-center
+    0%
+        -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0)
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0)
+
+    100%
+        -webkit-box-shadow: 0 0 30px 0px rgba(0, 0, 0, 0.50)
+        box-shadow: 0 0 30px 0px rgba(0, 0, 0, 0.50)
+
+.center
+    padding-left: calc(50% - 570px)
+    padding-right: calc(50% - 570px)
+
+.registration
+    display: flex
+    gap: 128px
+    margin: 64px 0px 96px 0px
+
+    &__main
+        display: flex
+        flex-direction: column
+        gap: 35px
+
+    &__button
+        width: 167px
+        cursor: pointer
+        display: flex
+        align-items: center
+        justify-content: center
+        background-color: $colorSelectSite
+        border: solid 1px $colorSelectSite
+        transition: background-color 0.3s ease
+        padding: 16px 29px
+        color: #FFFFFF
+
+        &:hover
+            animation: shadow-drop-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+            border: solid 1px $colorSelectSite
+            background-color: #FFFFFF
+
+        &_text
+            display: flex
+            align-items: center
+            gap: 20px
+            font-size: 14px
+            font-weight: 400
+            line-height: 19px
+            color: #FFFFFF
+
+        &:hover &_text
+            color: $colorSelectSite
+
+        &-text svg
+            margin-top: 4px
+
+        &:hover path
+            fill: $colorSelectSite
+
+.perks
+    display: flex
+    flex-direction: column
+    gap: 22px
+
+    &__title
+        font-size: 24px
+        font-weight: 400
+        line-height: 29px
+        letter-spacing: 0em
+        text-align: left
+        color: $mainColor
+
+    &__text
+        font-size: 24px
+        font-weight: 400
+        line-height: 29px
+        letter-spacing: 0em
+        text-align: left
+        color: $mainColor
+
+    &__ull
+        list-style: url('/img/Registration/jackdaw.svg')
+        margin-left: 30px
+
+    &__li
+        padding-left: 22px
+        margin-bottom: 16px
+        font-size: 24px
+        font-weight: 400
+        line-height: 29px
+        letter-spacing: 0em
+        text-align: left
+        color: $mainColor
+
+.person
+
+    .person__title
+        margin-bottom: 20px
+        font-size: 16px
+        font-weight: 400
+        line-height: 19px
+        letter-spacing: 0em
+        text-align: left
+        color: $mainColor
+
+    &__form_inputs
+        display: flex
+        flex-direction: column
+        gap: 20px
+
+    &__form_input
+        padding: 16px
+        border: solid 1px #A4A4A4
+        outline: none
+        color: $colorText
+        font-size: 13px
+        font-weight: 400
+        line-height: 22px
+
+.gender
+    display: flex
+    gap: 20px
+
+    &__check
+        justify-content: center
+        display: flex
+        align-items: center
+        gap: 10px
+
+.login
+
+    &__title
+        margin-bottom: 20px
+        font-size: 16px
+        font-weight: 400
+        line-height: 19px
+        letter-spacing: 0em
+        text-align: left
+        color: $mainColor
+
+    &__form_inputs
+        display: flex
+        flex-direction: column
+        gap: 20px
+        margin-bottom: 15px
+
+    &__form_input
+        padding: 16px
+        border: solid 1px #A4A4A4
+        outline: none
+        color: $colorText
+        font-size: 13px
+        font-weight: 400
+        line-height: 22px
+
+    &__text
+        font-size: 13px
+        font-weight: 400
+        line-height: 16px
+        letter-spacing: 0em
+        text-align: left
+        color: #B1B1B1
+
+.radio_round
+    cursor: pointer
+
+////////Media////////
+
+@media (min-width: 768px) and (max-width: 1140px)
+
+    .registration
+        display: flex
+        gap: 22px
+        padding: 0px 20px
+
+@media (min-width: 320px) and (max-width: 767px)
+
+    .shipp
+        width: 95%
+
+    .registration
+        display: flex
+        flex-direction: column
+        padding: 0 15px
+        gap: 40px
+
+    .perks
+        &__title, &__text, &__li
+            font-size: 16px
+
+@media (min-width: 0px) and (max-width: 320px)
+    .shipp
+        width: 95%
+
+    .registration
+        display: flex
+        flex-direction: column
+        padding: 0 10px
+        gap: 20px
+
+    .perks
+        &__title, &__text, &__li
+            font-size: 14px

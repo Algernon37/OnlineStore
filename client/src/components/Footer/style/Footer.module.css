@@ -14,38 +14,6 @@ footer {
   background-color: #222;
 }
 
-.about__inner {
-  height: 341px;
-  align-items: center;
-  width: 1140px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 30px;
-}
-.about__cards {
-  align-self: center;
-  text-align: center;
-}
-.about__title {
-  margin: 29px 0 16px 0;
-  color: #FBFBFB;
-  font-family: "Lato", sans-serif;
-  font-size: 19.96px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-.about__text {
-  color: #FBFBFB;
-  text-align: center;
-  font-family: "Lato", sans-serif;
-  font-size: 13.972px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: normal;
-}
-
 .subscribe {
   background-image: url(../../..//img/MainPage/background.png);
   background-size: cover;

@@ -1,15 +1,27 @@
 @import '../../../AppStyle/_mixins'
 @import '../../../AppStyle/_vars'
 
+@keyframes shadow-pop-br
+    0%
+        box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e
+        transform: translateX(0) translateY(0)
+
+    100%
+        box-shadow: 1px 1px #3e3e3e, 2px 2px #3e3e3e, 3px 3px #3e3e3e, 4px 4px #3e3e3e, 5px 5px #3e3e3e, 6px 6px #3e3e3e, 7px 7px #3e3e3e, 8px 8px #3e3e3e
+        transform: translateX(-8px) translateY(-8px)
+
+@keyframes shadow-drop-center
+    0%
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0)
+
+    100%
+        box-shadow: 0 0 30px 0px rgba(0, 0, 0, 0.5)
+
 .shopBox
     display: flex
     justify-content: center
     gap: 128px
     margin: 96px 0px 128px 0px
-    
-.center
-    padding-left: calc(50% - 570px)
-    padding-right: calc(50% - 570px)
 
 .shopCards
     display: flex
@@ -17,53 +29,9 @@
     gap: 40px
     width: 652px
 
-.shopCard
-    display: flex
-    position: relative
-    border: solid 1px #EAEAEA
-
-    &:hover
-        animation: shadow-drop-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
-
-    & svg
-        position: absolute
-        margin: 28px 22px 0px 0px
-        top: 0
-        right: 0
-        cursor: pointer
-
-    &__box
-        display: flex
-        flex-direction: column
-        gap: 42px
-        padding: 22px 97px 62px 31px
-
-    &__img
-        width: 262px
-
-    &__title
-        font-size: 24px
-        font-weight: 400
-        line-height: 29px
-        letter-spacing: 0em
-        text-align: left
-
-    &__main
-        display: flex
-        flex-direction: column
-        gap: 6px
-        font-size: 22px
-        font-weight: 400
-        line-height: 26px
-        text-align: left
-        list-style: none
-
-    &__price
-        color: $colorSelectSite
-        font-size: 22px
-        font-weight: 400
-        line-height: 26px
-        text-align: left
+.center
+    padding-left: calc(50% - 570px)
+    padding-right: calc(50% - 570px)
 
 .buttons
     display: flex
@@ -98,7 +66,7 @@
             animation: shadow-drop-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
             border: solid 1px $colorSelectSite
 
-        &-text
+        &_text
             color: #FFFFFF
 
         &:hover &-text
@@ -130,18 +98,6 @@
             animation: shadow-drop-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
             border: solid 1px #FFFFFF
 
-#numberInput
-    width: 44px
-    height: 24.95px
-    margin-left: 24px
-    text-align: center
-    font-size: 18px
-    font-weight: 400
-    line-height: 22px
-    color: $colorText
-    outline: none
-    border: solid 1px #EAEAEA
-
 .shipp
     width: 360px
 
@@ -172,6 +128,9 @@
         font-weight: 400
         line-height: 22px
 
+.emptyInput
+    border: solid 1px $colorSelectSite
+
 .shipp__buying
     background: #F5F3F3
 
@@ -190,7 +149,7 @@
         padding-bottom: 21px
         border-bottom: 1px solid #E2E2E2
 
-    &__title-small
+    &__title_small
         font-size: 11px
         font-weight: 400
         line-height: 13px
@@ -198,7 +157,7 @@
         text-align: left
         color: $colorText
 
-    &__title-big
+    &__title_big
         font-size: 16px
         font-weight: 400
         line-height: 19px
@@ -208,6 +167,64 @@
 
     &__price
         margin-left: 14px
-        &-total
+
+        &_total
             margin-left: 14px
             color: $colorSelectSite
+
+////////MEDIA////////////   
+
+@media (min-width: 768px) and (max-width: 1140px)
+
+    .shopBox
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        margin: 59px 0px 100px 0px
+
+@media (min-width: 320px) and (max-width: 767px)
+
+    .shopBox
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        margin: 39px 0px 48px 0px
+
+    .shopCards
+        width: 95%
+
+    .buttons
+        gap: 9px
+        justify-content: center
+
+    .button
+        padding: 10px 9px
+
+    .shipp
+        width: 95%
+
+    .order
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+
+@media (min-width: 0px) and (max-width: 320px)
+    .shopBox
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        margin: 30px 0px 40px 0px
+
+    .shopCards,.shipp
+        width: 95%
+
+    .buttons
+        display: flex
+        flex-direction: column
+        gap: 10px
+        align-items: center
+

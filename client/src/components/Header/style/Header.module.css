@@ -44,7 +44,7 @@ header.fixed {
 /* <!-- /////////////////// Burger__menu /////////////////// --> */
 .nav.active {
   display: flex;
-  width: 15%;
+  width: 20%;
   flex-direction: column;
   background-color: #FFFFFF;
   position: absolute;
@@ -54,6 +54,7 @@ header.fixed {
   padding-left: 33px;
   padding-top: 32px;
   box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+  opacity: 1;
 }
 
 .burger__title {
@@ -113,6 +114,10 @@ header.fixed {
 
 /* <!-- /////////////////// Media /////////////////// --> */
 @media (min-width: 768px) and (max-width: 1140px) {
+  .nav.active {
+    display: flex;
+    width: 30%;
+  }
   .header {
     width: 100%;
   }

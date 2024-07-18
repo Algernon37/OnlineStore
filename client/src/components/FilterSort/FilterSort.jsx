@@ -2,7 +2,7 @@ import style from './style/FilterSort.module.sass'
 import { Link } from 'react-router-dom';
 
 
-function FilterSort({ introRef }) {
+const FilterSort = ({ introRef }) => {
 
     return (
         <div className={`${style.filterSort} ${style.center}`} id="intro" ref={introRef}>
